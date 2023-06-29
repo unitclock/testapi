@@ -12,20 +12,24 @@ func main() {
 
 	r.GET("/testapi", func(c *gin.Context) {
 		c.JSON(200, map[string]any{
-			"nodes": map[int]any{
-				1: map[string]any{
+			"nodes": []any{
+				map[string]any{
+					"id":        1,
 					"location":  "us",
 					"available": true,
 				},
-				2: map[string]any{
+				map[string]any{
+					"id":        2,
 					"location":  "jp",
 					"available": false,
 				},
-				03: map[string]any{
+				map[string]any{
+					"id":        3,
 					"location":  "aus",
 					"available": false,
 				},
-				4: map[string]any{
+				map[string]any{
+					"id":        4,
 					"location":  "ru",
 					"available": false,
 				},
